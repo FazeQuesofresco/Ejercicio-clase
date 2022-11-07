@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar</title>
+</head>
+<body>
+    Número1:<input type="text" id="num1id"> <br>
+    Número2:<input type="text" id="num2id"><br>
+    <input type="button" value="Sumar" onclick="sumar()">
+    <input type="button" value="Restar" onclick="restar()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <script>
+        function sumar(){
+            var num1 = document.getElementById("num1id").value;
+            var num2 = document.getElementById("num2id").value;
+            var resultado = parseInt(num1) + parseInt(num2);
+            alert ("Tu número es:" + resultado);
+            
+
+        } 
+        function restar(){
+        
+            var num1resta = document.getElementById("num1id").value;
+            var num2resta = document.getElementById("num2id").value;
+            
+            var resta = parseInt(num1resta)-parseInt(num2resta);
+        
+            alert ("Tu número es:" + resta);    
+
+
+        }
+        function dividir(){
+        
+        var num1dividir = document.getElementById("num1id").value;
+        var num2dividir = document.getElementById("num2id").value;
+        
+    
+        if(num2dividir == 0){
+            alert("No se puede dividir por 0");
+        }else{
+            var dividir = parseInt(num1dividir) /parseInt(num2dividir);
+            alert ("Tu número es:" + dividir);  
+        }
+        
+        }
+       
+    </script>
+
+</body>
+</html>
