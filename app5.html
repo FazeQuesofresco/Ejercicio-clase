@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de los alimentos</title>
+    <script>
+        let lista_ods = ["glucidos", "lípidos", "proteinas de origen láctico",
+        "proteinas","vitaminas y sales minerales(verduras)", "vitaminas y sales minerales(frutas)"];
+
+    </script>
+</head>
+<body>
+    
+    <div id="mensaje"></div>
+<img src="rueda de los alimentos.jpg" alt="Rueda de los alimentos" />
+    <script>
+        let nombre = "";
+        let ods = "";
+
+        nombre = prompt("¿Como te llamas?");
+        ods = prompt("Selecciona un GRUPO DE LA TABLA. Elige entre 1 y 6:");
+     
+        let ods_select = parseInt(ods) - 1;
+
+        if(ods_select>=0 && ods_select<=6){
+              document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+                document.getElementById("mensaje").innerHTML += "Has elegido el grupo <b>" + lista_ods[ods_select] + "</b>";
+        }else{
+            document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+            document.getElementById("mensaje").innerHTML += "<p> Solo puedes elegir un número entre el 1 y el 6</p>";
+        }
+    </script>
+
+</body>
+</html>
